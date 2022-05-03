@@ -3,10 +3,94 @@
    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
    --Dark-grayish-blue: hsl(227, 10%, 46%);
    --Dark-gray: hsl(0, 0%, 59%);
+   --dark-border: rgb(150, 150, 150, 0.3);
 }
 
-/* - Font size (name and stats): 18px */
 body {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100vw;
+   height: 100vh;
    font-size: 18px;
    font-family: "Kumbh Sans";
+   background-image: url("../images/bg-pattern-top.svg"),
+      url("/images/bg-pattern-bottom.svg");
+   background-repeat: no-repeat, no-repeat;
+   background-position: -105% 477%, 203% -478%;
+   background-color: var(--Dark-cyan);
+}
+
+.container {
+   width: 400px;
+   height: 50%;
+   border: 1px solid none;
+   border-radius: 20px;
+   background-color: floralwhite;
+}
+
+.card-bg {
+   width: 100%;
+   border-radius: 20px 20px 0 0;
+}
+
+.img-avatar {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+}
+
+.img-avatar #avatar {
+   margin-top: -50px;
+   border-radius: 50%;
+   border: 5px solid white;
+}
+
+.name {
+   display: flex;
+   justify-content: center;
+   margin-top: 20px;
+}
+
+.name > p {
+   font-family: "Kumbh Sans";
+   text-align: center;
+   font-weight: 700;
+   color: var(--Very-dark-desaturated-blue);
+   font-size: 1rem;
+}
+
+.name span {
+   font-family: "Kumbh Sans";
+   font-weight: 400;
+   color: var(--Dark-gray);
+   font-size: 1rem;
+}
+
+.info-contant {
+   border-top: 1px solid var(--dark-border);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 20%;
+   padding: 20px 40px 20px 40px;
+}
+.info-contant h1 {
+   color: var(--Very-dark-desaturated-blue);
+   font-size: 18px;
+}
+.info-contant p {
+   letter-spacing: 1px;
+   font-size: 0.8rem;
+   color: var(--Dark-gray);
+}
+
+@media screen and (max-width: 375px) {
+   body {
+      background-image: url("../images/bg-pattern-top.svg"),
+         url("/images/bg-pattern-bottom.svg");
+      background-repeat: no-repeat, no-repeat;
+      background-position: -27% -800%, -20% -600%;
+   }
 }
